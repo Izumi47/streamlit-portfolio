@@ -1,15 +1,32 @@
-# Ahmad Arief bin Omar - Interactive Portfolio
+# Ahmad Arief bin Omar | Interactive Portfolio
 
-A personal portfolio and interactive CV showcasing my professional experience, projects, and skills.
+An interactive personal portfolio and CV built with Streamlit to present my background, experience, technical skills, and selected projects in a clean, modern web format.
 
-## 📋 What's Inside
+## Preview
 
-- **Interactive CV** – A digital version of my professional resume
-- **Project Portfolio** – Showcase of my work and achievements
-- **Skills & Experience** – Overview of my technical expertise
+[![Portfolio Preview](https://image.thum.io/get/width/1400/noanimate/https://ahmad-arief-portfolio.streamlit.app/)](https://ahmad-arief-portfolio.streamlit.app/)
 
-Built with Python and [Streamlit](https://streamlit.io/).
+➡️ **Open the live portfolio:** https://ahmad-arief-portfolio.streamlit.app/
 
----
+## Live App
 
-**GitHub:** [@Izumi47](https://github.com/Izumi47)
+🔗 https://ahmad-arief-portfolio.streamlit.app/
+
+## Portfolio Content
+
+- **Professional Summary**
+- **Work Experience**
+- **Technical Skills**
+- **Featured Projects**
+- **Education**
+- **Contact Information**
+
+## Tech Stack
+
+- **Python**
+- **Streamlit**
+
+## Profile
+
+- **GitHub:** https://github.com/Izumi47
+- **LinkedIn:** https://linkedin.com/in/ahmad-arief
