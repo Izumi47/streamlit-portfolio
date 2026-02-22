@@ -94,9 +94,17 @@ st.markdown('''
 
 # --- SIDEBAR ---
 with st.sidebar:
-    # Placeholder for profile picture
+    # Profile picture
     st.markdown('<div style="text-align: center;">', unsafe_allow_html=True)
-    st.image("IMG_5385.jpg", width=300)
+    try:
+        image = Image.open("IMG_5385.jpg")
+        st.image(image, width=300)
+    except FileNotFoundError:
+        st.markdown('''
+        <div style="text-align: center; background: linear-gradient(135deg, #1E88E5, #00BCD4); border-radius: 12px; padding: 3rem;">
+            <p style="font-size: 5rem; margin: 0;">👨‍💻</p>
+        </div>
+        ''', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown('<h2 style="text-align: center; margin-bottom: 0;">Ahmad Arief</h2>', unsafe_allow_html=True)
