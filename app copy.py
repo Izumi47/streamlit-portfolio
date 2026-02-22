@@ -1,6 +1,5 @@
 import streamlit as st
 from PIL import Image
-from pathlib import Path
 
 # Set page config
 st.set_page_config(page_title="Ahmad Arief | Portfolio", page_icon="👨‍💻", layout="wide", initial_sidebar_state="expanded")
@@ -95,31 +94,9 @@ st.markdown('''
 
 # --- SIDEBAR ---
 with st.sidebar:
-    # Profile picture
+    # Placeholder for profile picture
     st.markdown('<div style="text-align: center;">', unsafe_allow_html=True)
-    try:
-        base_dir = Path(__file__).resolve().parent
-        candidate_images = ["IMG_5385.JPG", "IMG_5385.jpg", "IMG_5385.jpeg", "IMG_5385.png"]
-        candidate_dirs = [base_dir / "assets", base_dir]
-        image_path = next(
-            (
-                folder / name
-                for folder in candidate_dirs
-                for name in candidate_images
-                if (folder / name).exists()
-            ),
-            None,
-        )
-        if image_path is None:
-            raise FileNotFoundError("Profile image not found")
-        image = Image.open(image_path)
-        st.image(image, width=300)
-    except FileNotFoundError:
-        st.markdown('''
-        <div style="text-align: center; background: linear-gradient(135deg, #1E88E5, #00BCD4); border-radius: 12px; padding: 3rem;">
-            <p style="font-size: 5rem; margin: 0;">👨‍💻</p>
-        </div>
-        ''', unsafe_allow_html=True)
+    st.image("IMG_5385.jpg", width=300)
     st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown('<h2 style="text-align: center; margin-bottom: 0;">Ahmad Arief</h2>', unsafe_allow_html=True)
@@ -133,16 +110,16 @@ with st.sidebar:
     st.markdown("🔗 **LinkedIn:**<br>[linkedin.com/in/ahmad-arief](https://linkedin.com/in/ahmad-arief)", unsafe_allow_html=True)
     st.markdown("🔗 **GitHub:**<br>[github.com/Izumi47](https://github.com/Izumi47)", unsafe_allow_html=True)
     
-    # st.markdown("---")
-    # # Mock download button for CV
-    # with open("CV Ahmad Arief bin Omar.pdf", "rb") as file:
-    #     st.download_button(
-    #         label="📄 Download Resume",
-    #         data=file,
-    #         file_name="CV Ahmad Arief bin Omar.pdf",
-    #         mime="application/pdf",
-    #         use_container_width=True
-    #     )
+    st.markdown("---")
+    # Mock download button for CV
+    with open("CV Ahmad Arief bin Omar.pdf", "rb") as file:
+        st.download_button(
+            label="📄 Download Resume",
+            data=file,
+            file_name="CV Ahmad Arief bin Omar.pdf",
+            mime="application/pdf",
+            use_container_width=True
+        )
 
 # --- MAIN CONTENT ---
 st.markdown('<h1 class="hero-title">Hi, I\'m Ahmad Arief 👋</h1>', unsafe_allow_html=True)
@@ -299,6 +276,9 @@ with tabs[3]:
 
 # --- TAB 5: EDUCATION & REFERENCES ---
 with tabs[4]:
+    col1, col2 = st.columns(2)
+    
+    with col1:
         st.markdown('<p class="section-title">Education</p>', unsafe_allow_html=True)
         st.markdown('''
         <div class="custom-card">
@@ -311,5 +291,23 @@ with tabs[4]:
                 <li><b>Achievements:</b> 3 Dean’s List, 1 Conditional Dean’s List</li>
             </ul>
             <p style="font-size: 0.9rem; margin-top: 1rem;"><b>Relevant Coursework:</b> Object-Oriented Programming, Web & Mobile Programming, System Analysis & Design, Software Architecture & Testing, Database Systems, Server Computing, Operating Systems.</p>
+        </div>
+        ''', unsafe_allow_html=True)
+        
+    with col2:
+        st.markdown('<p class="section-title">References</p>', unsafe_allow_html=True)
+        st.markdown('''
+        <div class="custom-card" style="margin-bottom: 1rem;">
+            <h4 style="margin-bottom: 0.2rem;">Rosidah binti Rosdi</h4>
+            <p style="color: gray; margin-bottom: 0.5rem;">MSU, Shah Alam</p>
+            <p style="color: #1E88E5; font-weight: 600;">📱 +6013-204-3735</p>
+        </div>
+        ''', unsafe_allow_html=True)
+        
+        st.markdown('''
+        <div class="custom-card">
+            <h4 style="margin-bottom: 0.2rem;">Ahmad Hafizuddin Ahmad Jaafar</h4>
+            <p style="color: gray; margin-bottom: 0.5rem;">AstraZeneca, Mutiara Damansara</p>
+            <p style="color: #1E88E5; font-weight: 600;">📱 +6019-670-2892</p>
         </div>
         ''', unsafe_allow_html=True)
