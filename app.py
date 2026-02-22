@@ -276,9 +276,6 @@ with tabs[3]:
 
 # --- TAB 5: EDUCATION & REFERENCES ---
 with tabs[4]:
-    col1, col2 = st.columns(2)
-    
-    with col1:
         st.markdown('<p class="section-title">Education</p>', unsafe_allow_html=True)
         st.markdown('''
         <div class="custom-card">
@@ -291,23 +288,5 @@ with tabs[4]:
                 <li><b>Achievements:</b> 3 Dean’s List, 1 Conditional Dean’s List</li>
             </ul>
             <p style="font-size: 0.9rem; margin-top: 1rem;"><b>Relevant Coursework:</b> Object-Oriented Programming, Web & Mobile Programming, System Analysis & Design, Software Architecture & Testing, Database Systems, Server Computing, Operating Systems.</p>
-        </div>
-        ''', unsafe_allow_html=True)
-        
-    with col2:
-        st.markdown('<p class="section-title">References</p>', unsafe_allow_html=True)
-        st.markdown('''
-        <div class="custom-card" style="margin-bottom: 1rem;">
-            <h4 style="margin-bottom: 0.2rem;">Rosidah binti Rosdi</h4>
-            <p style="color: gray; margin-bottom: 0.5rem;">MSU, Shah Alam</p>
-            <p style="color: #1E88E5; font-weight: 600;">📱 +6013-204-3735</p>
-        </div>
-        ''', unsafe_allow_html=True)
-        
-        st.markdown('''
-        <div class="custom-card">
-            <h4 style="margin-bottom: 0.2rem;">Ahmad Hafizuddin Ahmad Jaafar</h4>
-            <p style="color: gray; margin-bottom: 0.5rem;">AstraZeneca, Mutiara Damansara</p>
-            <p style="color: #1E88E5; font-weight: 600;">📱 +6019-670-2892</p>
         </div>
         ''', unsafe_allow_html=True)
