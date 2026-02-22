@@ -4,3 +4,6 @@
 
 # Ignore PDF files
 *.pdf
+
+# Ignore backup files
+app copy.py
