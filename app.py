@@ -118,16 +118,16 @@ with st.sidebar:
     st.markdown("🔗 **LinkedIn:**<br>[linkedin.com/in/ahmad-arief](https://linkedin.com/in/ahmad-arief)", unsafe_allow_html=True)
     st.markdown("🔗 **GitHub:**<br>[github.com/Izumi47](https://github.com/Izumi47)", unsafe_allow_html=True)
     
-    st.markdown("---")
-    # Mock download button for CV
-    with open("CV Ahmad Arief bin Omar.pdf", "rb") as file:
-        st.download_button(
-            label="📄 Download Resume",
-            data=file,
-            file_name="CV Ahmad Arief bin Omar.pdf",
-            mime="application/pdf",
-            use_container_width=True
-        )
+    # st.markdown("---")
+    # # Mock download button for CV
+    # with open("CV Ahmad Arief bin Omar.pdf", "rb") as file:
+    #     st.download_button(
+    #         label="📄 Download Resume",
+    #         data=file,
+    #         file_name="CV Ahmad Arief bin Omar.pdf",
+    #         mime="application/pdf",
+    #         use_container_width=True
+    #     )
 
 # --- MAIN CONTENT ---
 st.markdown('<h1 class="hero-title">Hi, I\'m Ahmad Arief 👋</h1>', unsafe_allow_html=True)
