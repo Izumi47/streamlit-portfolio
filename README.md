@@ -4,7 +4,7 @@ An interactive personal portfolio and CV built with Streamlit to present my back
 
 ## Preview
 
-[![Portfolio Preview](https://image.thum.io/get/width/1400/noanimate/https://ahmad-arief-portfolio.streamlit.app/)](https://ahmad-arief-portfolio.streamlit.app/)
+[![Portfolio Preview](assets/portfolio-preview.svg)](https://ahmad-arief-portfolio.streamlit.app/)
 
 ➡️ **Open the live portfolio:** https://ahmad-arief-portfolio.streamlit.app/
 
