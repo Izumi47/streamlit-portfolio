@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+from pathlib import Path
 
 # Set page config
 st.set_page_config(page_title="Ahmad Arief | Portfolio", page_icon="👨‍💻", layout="wide", initial_sidebar_state="expanded")
@@ -97,7 +98,12 @@ with st.sidebar:
     # Profile picture
     st.markdown('<div style="text-align: center;">', unsafe_allow_html=True)
     try:
-        image = Image.open("IMG_5385.jpg")
+        base_dir = Path(__file__).resolve().parent
+        candidate_images = ["IMG_5385.JPG", "IMG_5385.jpg", "IMG_5385.jpeg", "IMG_5385.png"]
+        image_path = next((base_dir / name for name in candidate_images if (base_dir / name).exists()), None)
+        if image_path is None:
+            raise FileNotFoundError("Profile image not found")
+        image = Image.open(image_path)
         st.image(image, width=300)
     except FileNotFoundError:
         st.markdown('''
